@@ -1,0 +1,34 @@
+{
+  "name": "rhinoerror",
+  "version": "0.1.0",
+  "description": "Add context (debugInfo, userInfo, code, message) to Errors while preserving stack traces.",
+  "main": "rhinoerror.js",
+  "types": "rhinoerror.d.ts",
+  "type": "module",
+  "engines": {
+    "node": ">=18.2.0",
+    "npm": ">=8.9.0"
+  },
+  "scripts": {
+    "gentypes": "tsc rhinoerror.js --declaration --allowJs --emitDeclarationOnly --outDir .",
+    "lint": "standard",
+    "lint:fix": "standard --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wingedrhino/node-rhinoerror.git"
+  },
+  "keywords": [
+    "errors"
+  ],
+  "author": "Rhino Maximus",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/wingedrhino/node-rhinoerror/issues"
+  },
+  "homepage": "https://github.com/wingedrhino/node-rhinoerror#readme",
+  "devDependencies": {
+    "standard": "^17.0.0",
+    "typescript": "^4.6.4"
+  }
+}
