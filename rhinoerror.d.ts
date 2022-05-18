@@ -9,11 +9,11 @@ export class RhinoError extends Error {
      *
      * @param {string} code a uniquely identifiable error code for this error
      * @param {string} message the message to display to the user
-     * @param {Error | null | undefined} error the cause of this error (another error object) or null if no cause
-     * @param {any | null | undefined} debugInfo information that'll be useful to developers to debug this error
-     * @param {any | null | undefined} userInfo information that'll be useful to the user to understand this error
+     * @param {Error | null | undefined} [error] the cause of this error (another error object) or null if no cause
+     * @param {any | null | undefined} [debugInfo] information that'll be useful to developers to debug this error
+     * @param {any | null | undefined} [userInfo] information that'll be useful to the user to understand this error
      */
-    constructor(code: string, message: string, error: Error | null | undefined, debugInfo: any | null | undefined, userInfo: any | null | undefined);
+    constructor(code: string, message: string, error?: Error | null | undefined, debugInfo?: any | null | undefined, userInfo?: any | null | undefined);
     code: string;
     cause: Error;
     stack: string;
