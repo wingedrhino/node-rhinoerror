@@ -22,7 +22,7 @@ export class RhinoError extends Error {
     this.name = code
     this.code = code
     this.message = message
-    if (error === null) {
+    if (error === null || error === undefined) {
       this.cause = new Error(message)
     } else {
       this.cause = error

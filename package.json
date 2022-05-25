@@ -1,6 +1,6 @@
 {
   "name": "rhinoerror",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Add context (debugInfo, userInfo, code, message) to Errors while preserving stack traces.",
   "main": "rhinoerror.js",
   "types": "rhinoerror.d.ts",
@@ -29,6 +29,6 @@
   "homepage": "https://github.com/wingedrhino/node-rhinoerror#readme",
   "devDependencies": {
     "standard": "^17.0.0",
-    "typescript": "^4.6.4"
+    "typescript": "^4.7.2"
   }
 }
