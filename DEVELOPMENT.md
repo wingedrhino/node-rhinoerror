@@ -2,25 +2,28 @@
 
 ## Codebase
 
-This package is written in vanilla JavaScript (for now). It has no external
-dependencies, except TypeScript, which is only used during build-time to
-generate type definitions, and standard, which is used as a linter.
+This package is written in vanilla TypeScript (for now) and has no external
+dependencies. It used to be written in JavaScript + JSDoc; but it was proving
+increasingly difficult to write JSDoc as easily as TypeScript.
 
-## Verifying Changes
+We'll only support the latest stable version of Node.js (not LTS), and the
+latest stable version of TypeScript. There IS a good chance however, that this
+package will work on older versions of Node.js and TypeScript. It does not
+depend on any bleeding edge features.
+
+## Run linters and unit tests
 
 ```bash
-npm run lint:fix
+npm run test
 ```
 
-## Updating type definitions
+## Build the Package
 
-```
-npm run gentypes
+```bash
+npm run build
 ```
 
-## Publishing a new version
+## Publish a new version
 
 To push a new version, update the version number in `package.json`, and then run
 `npm publish`. Remember to respect semantic versioning!
-
-

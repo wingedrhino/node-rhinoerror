@@ -2,7 +2,7 @@
 
 The RhinoError constructor takes the following arguments:
 
-1. `code`: A string that can be used to identify the error.
+1. `code`: A string / number that can be used to identify the error.
 2. `message`: A string that can be used to provide an explanation to the user
 3. `cause`: An Error object that caused the error, or null (optional).
 4. `debugInfo`: debug information for developers (optional)
@@ -16,6 +16,16 @@ try {
   throw new RhinoError('UserInputError', 'you provided an invalid JSON file', error, null, {input});
 }
 ```
+
+The default value of the `name` property of a `RhinoError` is `'RhinoError'`.
+
+If the type of the `code` argument is a number, we'll try to set the `name`
+property of the error to the name of the appropriate HttpCode if it exists.
+For example, passing `code` as `403` will set the name of the error to
+`'HttpErrorForbidden'`.
+
+If the type of the `code` argument is a string, we'll set the name property
+of the error to the value of the `code` argument.
 
 The stack trace of the `cause` error is preserved when it is wrapped in a
 `RhinoError`.
