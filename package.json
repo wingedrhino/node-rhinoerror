@@ -1,6 +1,6 @@
 {
   "name": "rhinoerror",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Add context (debugInfo, userInfo, code, message) to Errors while preserving stack traces.",
   "main": "dist/src/rhinoerror.js",
   "types": "dist/src/rhinoerror.d.ts",
@@ -11,8 +11,9 @@
   },
   "scripts": {
     "build:clean": "rimraf dist",
+    "build:remove-tests": "rimraf dist/test",
     "build:compile": "tsc",
-    "build": "npm-run-all build:clean build:compile",
+    "build": "npm-run-all build:clean build:compile build:remove-tests",
     "lint:fix:src": "ts-standard --fix src/**/*.ts",
     "lint:fix:test": "ts-standard --fix src/**/*.ts",
     "lint:fix": "npm-run-all lint:fix:src lint:fix:test",
